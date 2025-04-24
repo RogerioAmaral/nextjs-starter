@@ -10,7 +10,7 @@
     "lint": "next lint",
     "prettier": "npx prettier src --check",
     "prettier:fix": "npm run prettier -- --write",
-    "deploy": "next build && next start"
+    "deploy": "next build && [ -d .next ] && next start || echo 'Deploy Build failed!'"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.2",
